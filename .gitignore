@@ -1,0 +1,7 @@
+/src/.env
+/src/vendor/
+/src/node_modules/
+/src/public/storage
+/src/storage/*.key
+/infra/mysql/db-store/
+.DS_Store
