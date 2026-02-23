@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Attendance;
+use App\Models\AttendanceCorrectionRequest;
 
 class User extends Authenticatable
 {
@@ -21,6 +23,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'email_verified_at',
     ];
 
     /**
@@ -32,6 +36,21 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function attendances()
+    {
+        return $this->hasMany(Attendance::class);
+    }
+
+    public function correctionRequests()
+    {
+        return $this->hasMany(AttendanceCorrectionRequest::class);
+    }
+
+    public function approvedCorrectionRequests()
+    {
+        return $this->hasMany(AttendanceCorrectionRequest::class,'approved_by');
+    }
 
     /**
      * The attributes that should be cast.

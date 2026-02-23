@@ -4,4 +4,5 @@
 /src/public/storage
 /src/storage/*.key
 /infra/mysql/db-store/
+/docker/mysql/data/
 .DS_Store
