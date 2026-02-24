@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+.app-header {
+    height: 80px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.app-header__logo {
+    width: 370px;
+    height: 36px;
+    display: block;
+    object-fit: contain;
+}
+
+.main-wrapper {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    padding: 80px 16px;
+}
