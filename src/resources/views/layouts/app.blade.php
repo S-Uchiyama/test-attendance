@@ -9,7 +9,7 @@
 </head>
 <body>
     @include('components.header')
-    <main class="main-wrapper">
+    <main class="@yield('main_class', 'main-wrapper')">
         @yield('content')
     </main>
 </body>

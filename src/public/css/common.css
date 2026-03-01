@@ -15,6 +15,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 24px;
+    justify-content: space-between;
 }
 
 .app-header__logo {
@@ -24,9 +25,126 @@ body {
     object-fit: contain;
 }
 
+.app-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.app-header__link {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.app-header__logout-form {
+    margin: 0;
+}
+
+.app-header__logout {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+}
+
 .main-wrapper {
     min-height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     padding: 80px 16px;
+}
+
+.attendance-page {
+    min-height: calc(100vh - 80px);
+    background: #f0eff2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 210px;
+}
+
+.attendance-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attendance-status {
+    margin: 0 0 30px;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    background: #c8c8c8;
+    color: #696969;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.15em;
+}
+
+.attendance-date {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.attendance-time {
+    margin: 18px 0 54px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.attendance-clockin {
+    width: 221px;
+    height: 77px;
+    border: 0;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+}
+
+.attendance-actions {
+    display: flex;
+    gap: 76px;
+    margin-top: 32px;
+}
+
+.attendance-action {
+    width: 221px;
+    height: 77px;
+    border-radius: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.attendance-action--primary {
+    border: 0;
+    background: #000;
+    color: #fff;
+}
+
+.attendance-action--secondary {
+    border: 0;
+    background: #fff;
+    color: #000;
+}
+
+.attendance-finished-message {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
 }

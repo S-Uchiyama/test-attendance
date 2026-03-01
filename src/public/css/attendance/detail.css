@@ -1,0 +1,244 @@
+.attendance-detail-page {
+    min-height: calc(100vh - 80px);
+    background: #efeff2;
+    padding: 64px 0 72px;
+}
+
+.attendance-detail-card {
+    width: min(1040px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.attendance-detail-title {
+    margin: 0 0 44px;
+    border-left: 8px solid #000;
+    padding-left: 16px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.attendance-detail-panel {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.attendance-detail-row {
+    min-height: 110px;
+    border-bottom: 1px solid #d7d7d7;
+    display: flex;
+    align-items: center;
+    padding: 0 36px;
+}
+
+.attendance-detail-row:last-child {
+    border-bottom: 0;
+}
+
+.attendance-detail-label {
+    width: 210px;
+    color: #747474;
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+
+.attendance-detail-value {
+    flex: 1;
+    max-width: 420px;
+    padding-right: 120px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.attendance-detail-date {
+    flex: 1;
+    max-width: 420px;
+    padding-right: 120px;
+    display: flex;
+    gap: 80px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.attendance-detail-time-range {
+    flex: 1;
+    max-width: 420px;
+    padding-right: 120px;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.attendance-detail-time-range input {
+    width: 130px;
+    height: 42px;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    background: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    padding: 0 10px;
+}
+
+.attendance-detail-time-range span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.attendance-detail-time-range--plain {
+    gap: 70px;
+}
+
+.attendance-detail-time-range--plain span {
+    min-width: 64px;
+    text-align: center;
+}
+
+.attendance-detail-row-note {
+    align-items: flex-start;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.attendance-detail-note-wrap {
+    flex: 1;
+    max-width: 720px;
+}
+
+.attendance-detail-note-wrap textarea {
+    width: 360px;
+    height: 72px;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    resize: none;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    padding: 12px 14px;
+}
+
+.attendance-detail-action {
+    margin-top: 46px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.attendance-detail-submit {
+    width: 130px;
+    height: 50px;
+    border: 0;
+    border-radius: 8px;
+    background: #000;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.attendance-detail-value--note {
+    max-width: 720px;
+    white-space: pre-wrap;
+}
+
+.attendance-detail-lock-message {
+    margin: 20px 8px 0 0;
+    text-align: right;
+    color: #FF000080;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.attendance-detail-submit:disabled,
+.attendance-detail-time-range input:disabled,
+.attendance-detail-note-wrap textarea:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .attendance-detail-page {
+        padding: 36px 0 48px;
+    }
+
+    .attendance-detail-card {
+        width: calc(100% - 24px);
+    }
+
+    .attendance-detail-title {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+    .attendance-detail-row {
+        min-height: auto;
+        padding: 14px 12px;
+        align-items: flex-start;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .attendance-detail-label,
+    .attendance-detail-value,
+    .attendance-detail-date {
+        font-size: 22px;
+    }
+
+    .attendance-detail-date {
+        max-width: none;
+        padding-right: 0;
+        gap: 24px;
+    }
+
+    .attendance-detail-time-range {
+        max-width: none;
+        padding-right: 0;
+        gap: 10px;
+    }
+
+    .attendance-detail-value {
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .attendance-detail-time-range input {
+        width: 86px;
+        height: 34px;
+        font-size: 22px;
+    }
+
+    .attendance-detail-time-range span {
+        font-size: 22px;
+    }
+
+    .attendance-detail-time-range--plain {
+        gap: 24px;
+    }
+
+    .attendance-detail-note-wrap {
+        width: 100%;
+        max-width: none;
+        flex: none;
+    }
+
+    .attendance-detail-note-wrap textarea {
+        width: 100%;
+        font-size: 22px;
+        height: 120px;
+    }
+
+    .attendance-detail-submit {
+        width: 100px;
+        height: 42px;
+        font-size: 24px;
+    }
+
+    .attendance-detail-lock-message {
+        font-size: 16px;
+        margin-right: 0;
+    }
+}

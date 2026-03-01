@@ -1,0 +1,129 @@
+.attendance-page {
+    min-height: calc(100vh - 80px);
+    background: #efeff2;
+    display: block;
+    padding: 62px 0 70px;
+}
+
+.attendance-list-card {
+    width: min(920px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.attendance-list-title {
+    margin: 0 0 28px;
+    border-left: 8px solid #000;
+    padding-left: 18px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.attendance-list-month-nav {
+    height: 72px;
+    border: 0;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    margin-bottom: 34px;
+}
+
+.attendance-list-month-link {
+    color: #6d6d6d;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.attendance-list-month-label {
+    margin: 0;
+    color: #000;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.attendance-list-month-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.attendance-list-table-wrap {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.attendance-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.attendance-list-table th,
+.attendance-list-table td {
+    height: 54px;
+    border-bottom: 1px solid #d2d2d2;
+    text-align: center;
+    padding: 0 8px;
+    color: #6a6a6a;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.attendance-list-table th {
+    font-size: 20px;
+}
+
+.attendance-list-table td:first-child {
+    width: 24%;
+}
+
+.attendance-list-detail-link {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.attendance-list-empty {
+    color: #8a8a8a;
+}
+
+@media (max-width: 900px) {
+    .attendance-page {
+        padding: 40px 0 48px;
+    }
+
+    .attendance-list-title {
+        font-size: 28px;
+    }
+
+    .attendance-list-month-nav {
+        height: 58px;
+    }
+
+    .attendance-list-month-link {
+        font-size: 16px;
+    }
+
+    .attendance-list-month-label {
+        font-size: 24px;
+    }
+
+    .attendance-list-table th,
+    .attendance-list-table td {
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .attendance-list-table th {
+        font-size: 13px;
+    }
+}
