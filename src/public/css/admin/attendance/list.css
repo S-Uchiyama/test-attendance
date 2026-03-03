@@ -1,0 +1,124 @@
+.admin-attendance-list-page {
+    min-height: calc(100vh - 80px);
+    background: #efeff2;
+    display: block;
+    padding: 62px 0 70px;
+}
+
+.admin-attendance-list-card {
+    width: min(920px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.admin-attendance-list-title {
+    margin: 0 0 28px;
+    border-left: 8px solid #000;
+    padding-left: 18px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.admin-attendance-month-nav {
+    height: 72px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    margin-bottom: 34px;
+}
+
+.admin-attendance-month-link {
+    color: #6d6d6d;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.admin-attendance-month-label {
+    margin: 0;
+    color: #000;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-attendance-month-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.admin-attendance-table-wrap {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.admin-attendance-table th,
+.admin-attendance-table td {
+    height: 54px;
+    border-bottom: 1px solid #d2d2d2;
+    text-align: center;
+    padding: 0 8px;
+    color: #6a6a6a;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.admin-attendance-table th {
+    font-size: 20px;
+}
+
+.admin-attendance-detail-link {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.admin-attendance-empty {
+    color: #8a8a8a;
+}
+
+@media (max-width: 900px) {
+    .admin-attendance-list-page {
+        padding: 40px 0 48px;
+    }
+
+    .admin-attendance-list-title {
+        font-size: 28px;
+    }
+
+    .admin-attendance-month-nav {
+        height: 58px;
+    }
+
+    .admin-attendance-month-link {
+        font-size: 16px;
+    }
+
+    .admin-attendance-month-label {
+        font-size: 24px;
+    }
+
+    .admin-attendance-table th,
+    .admin-attendance-table td {
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .admin-attendance-table th {
+        font-size: 13px;
+    }
+}

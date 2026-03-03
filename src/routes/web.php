@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\LoginController as AdminLoginController;
+use App\Http\Controllers\Admin\StampCorrectionRequestController as AdminStampCorrectionRequestController;
+use App\Http\Controllers\Admin\StampCorrectionRequestApproveController;
+use App\Http\Controllers\Admin\AttendanceListController as AdminAttendanceListController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\AttendanceListController;
 use App\Http\Controllers\AttendanceDetailController;
@@ -30,6 +33,18 @@ Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminLoginController::class, 'create'])->name('admin.login');
     Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('admin.login.store');
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
+
+    Route::get('/attendance/list', [AdminAttendanceListController::class, 'index'])
+    ->name('admin.attendance.list');
+
+    Route::get('/stamp_correction_request/list', [AdminStampCorrectionRequestController::class, 'index'])
+    ->name('admin.stamp_correction_request.list');
+
+    Route::get('/stamp_correction_request/approve/{attendance_correct_request_id}', [StampCorrectionRequestApproveController::class, 'show'])
+    ->name('admin.stamp_correction_request.approve');
+
+    Route::post('/stamp_correction_request/approve/{attendance_correct_request_id}', [StampCorrectionRequestApproveController::class, 'approve'])
+    ->name('admin.stamp_correction_request.approve.update');
 });
 
 // 一般ユーザー機能
@@ -54,10 +69,6 @@ Route::middleware('auth')->group(function () {
 // 管理者機能
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     // 仮: 管理者メニュー用
-    Route::get('/attendance/list', function () {
-        return 'admin attendance list';
-    })->name('admin.attendance.list');
-
     Route::get('/staff/list', function () {
         return 'admin staff list';
     })->name('admin.staff.list');
