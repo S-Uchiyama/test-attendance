@@ -1,0 +1,183 @@
+.admin-approve-page {
+    min-height: calc(100vh - 80px);
+    background: #efeff2;
+    padding: 64px 0 72px;
+}
+
+.admin-approve-card {
+    width: min(1040px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.admin-approve-title {
+    margin: 0 0 44px;
+    border-left: 8px solid #000;
+    padding-left: 16px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.admin-approve-panel {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-approve-row {
+    min-height: 110px;
+    border-bottom: 1px solid #d7d7d7;
+    display: flex;
+    align-items: center;
+    padding: 0 36px;
+}
+
+.admin-approve-row:last-child {
+    border-bottom: 0;
+}
+
+.admin-approve-label {
+    width: 210px;
+    color: #747474;
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+
+.admin-approve-value {
+    flex: 1;
+    max-width: 420px;
+    padding-right: 120px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.admin-approve-date {
+    flex: 1;
+    max-width: 420px;
+    padding-right: 120px;
+    display: flex;
+    gap: 80px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.admin-approve-time-range {
+    flex: 1;
+    max-width: 420px;
+    padding-right: 120px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.admin-approve-time-range span {
+    min-width: 64px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.admin-approve-row-note {
+    align-items: flex-start;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.admin-approve-value--note {
+    max-width: 720px;
+    white-space: pre-wrap;
+}
+
+.admin-approve-action {
+    margin-top: 46px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.admin-approve-submit {
+    width: 130px;
+    height: 50px;
+    border: 0;
+    border-radius: 8px;
+    background: #000;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-approve-submit--done {
+    background: #696969;
+    cursor: not-allowed;
+    white-space: nowrap;
+    width: auto;
+    min-width: 190px;
+    padding: 0 20px;
+    font-size: 32px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .admin-approve-page {
+        padding: 36px 0 48px;
+    }
+
+    .admin-approve-card {
+        width: calc(100% - 24px);
+    }
+
+    .admin-approve-title {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+    .admin-approve-row {
+        min-height: auto;
+        padding: 14px 12px;
+        align-items: flex-start;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .admin-approve-label,
+    .admin-approve-value,
+    .admin-approve-date {
+        font-size: 22px;
+    }
+
+    .admin-approve-date {
+        max-width: none;
+        padding-right: 0;
+        gap: 24px;
+    }
+
+    .admin-approve-time-range {
+        max-width: none;
+        padding-right: 0;
+        gap: 24px;
+    }
+
+    .admin-approve-value {
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .admin-approve-submit {
+        width: 100px;
+        height: 42px;
+        font-size: 24px;
+    }
+
+    .admin-approve-submit--done {
+        width: auto;
+        min-width: 140px;
+        padding: 0 12px;
+        font-size: 22px;
+    }
+}
