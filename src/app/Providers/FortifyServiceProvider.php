@@ -38,6 +38,8 @@ class FortifyServiceProvider extends ServiceProvider
                 : view('auth.login');
         });
 
+        Fortify::verifyEmailView(fn () => view('auth.email'));
+
         Fortify::authenticateUsing(function (Request $request) {
             // 管理者ログインURLなら admin、それ以外は user として判定
             $role = $request->is('admin/login') ? 'admin' : 'user';

@@ -63,3 +63,55 @@
     text-decoration: none;
     font-size: 20px;
 }
+
+.verify-email-page {
+    min-height: calc(100vh - 80px);
+    background: #efeff2;
+}
+
+.verify-email-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 220px;
+}
+
+.verify-email-message {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000;
+}
+
+.verify-email-button {
+    margin-top: 70px;
+    width: 257px;
+    height: 69px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #d9d9d9;
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.verify-email-resend-form {
+    margin-top: 78px;
+}
+
+.verify-email-resend-link {
+    border: 0;
+    background: transparent;
+    color: #0073cc;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0;
+}
