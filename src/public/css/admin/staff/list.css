@@ -1,0 +1,78 @@
+.admin-staff-list-page {
+    min-height: calc(100vh - 80px);
+    background: #efeff2;
+    display: block;
+    padding: 62px 0 70px;
+}
+
+.admin-staff-list-card {
+    width: min(920px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.admin-staff-list-title {
+    margin: 0 0 90px;
+    border-left: 8px solid #000;
+    padding-left: 18px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.admin-staff-table-wrap {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.admin-staff-table th,
+.admin-staff-table td {
+    height: 54px;
+    border-bottom: 1px solid #d2d2d2;
+    text-align: center;
+    padding: 0 10px;
+    color: #6a6a6a;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.admin-staff-table th {
+    font-size: 20px;
+}
+
+.admin-staff-detail-link {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.admin-staff-empty {
+    color: #8a8a8a;
+}
+
+@media (max-width: 900px) {
+    .admin-staff-list-page {
+        padding: 40px 0 48px;
+    }
+
+    .admin-staff-list-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .admin-staff-table th,
+    .admin-staff-table td {
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .admin-staff-table th {
+        font-size: 13px;
+    }
+}

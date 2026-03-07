@@ -7,7 +7,7 @@
                 {{-- 管理者メニュー --}}
                 <a href="{{ route('admin.attendance.list') }}" class="app-header__link">勤怠一覧</a>
                 <a href="{{ route('admin.staff.list') }}" class="app-header__link">スタッフ一覧</a>
-                <a href="{{ route('stamp_correction_request.list') }}" class="app-header__link">申請</a>
+                <a href="{{ route('admin.stamp_correction_request.list') }}" class="app-header__link">申請一覧</a>
             @else
                 {{-- 一般ユーザーメニュー --}}
                 <a href="{{ route('attendance.index') }}" class="app-header__link">勤怠</a>
