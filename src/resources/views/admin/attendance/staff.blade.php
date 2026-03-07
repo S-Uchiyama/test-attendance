@@ -56,7 +56,11 @@
         </div>
 
         <div class="admin-staff-attendance-actions">
-            <button type="button" class="admin-staff-attendance-csv">CSV出力</button>
-        </div>
+        <a  href="{{ route('admin.attendance.staff.csv', ['id' => $staff->id, 'month' => $currentMonth->format('Y-m')]) }}"
+            class="admin-staff-attendance-csv"
+        >
+            CSV出力
+        </a>
+</div>
     </section>
 @endsection

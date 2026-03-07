@@ -40,6 +40,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/attendance/list', [AdminAttendanceListController::class, 'index'])->name('admin.attendance.list');
     Route::get('/attendance/{id}', [AdminAttendanceDetailController::class, 'show'])->name('admin.attendance.detail');
     Route::get('/attendance/staff/{id}', [AdminAttendanceStaffController::class, 'index'])->name('admin.attendance.staff');
+    Route::get('/attendance/staff/{id}/csv', [AdminAttendanceStaffController::class, 'exportCsv'])
+    ->name('admin.attendance.staff.csv');
     Route::get('/staff/list', [StaffListController::class, 'index'])->name('admin.staff.list');
 
     Route::get('/stamp_correction_request/list', [AdminStampCorrectionRequestController::class, 'index'])
