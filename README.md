@@ -70,6 +70,7 @@ APP_ENV=local
 APP_KEY=
 APP_DEBUG=true
 APP_URL=http://localhost
+SESSION_SECURE_COOKIE=false
 
 DB_CONNECTION=mysql
 DB_HOST=mysql
@@ -146,5 +147,7 @@ php artisan db:seed
 ## テスト実行
 
 ```bash
+docker compose exec php bash
+cd /var/www
 php artisan test --testdox
 ```
