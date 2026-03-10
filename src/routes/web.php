@@ -6,7 +6,9 @@ use App\Http\Controllers\Admin\StampCorrectionRequestApproveController;
 use App\Http\Controllers\Admin\AttendanceStaffController as AdminAttendanceStaffController;
 use App\Http\Controllers\Admin\AttendanceListController as AdminAttendanceListController;
 use App\Http\Controllers\Admin\AttendanceDetailController as AdminAttendanceDetailController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\StaffListController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\AttendanceListController;
 use App\Http\Controllers\AttendanceDetailController;
@@ -31,10 +33,13 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+
 // 管理者
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminLoginController::class, 'create'])->name('admin.login');
-    Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('admin.login.store');
+    Route::post('/login', [AdminLoginController::class, 'store'])->name('admin.login.store');
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
 
     Route::get('/attendance/list', [AdminAttendanceListController::class, 'index'])->name('admin.attendance.list');
@@ -73,4 +78,3 @@ Route::middleware(['auth'])->group(function () {
     ->name('stamp_correction_request.list');
 
 });
-

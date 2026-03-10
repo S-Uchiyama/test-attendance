@@ -14,8 +14,7 @@ class LoginResponse implements LoginResponseContract
             return redirect()->intended('/admin/attendance/list');
         }
 
-        if ($user && is_null($user->email_verified_at) && !session()->has('verify_prompt_shown')) {
-            session()->put('verify_prompt_shown', true);
+        if ($user && is_null($user->email_verified_at)) {
             return redirect()->route('verification.notice');
         }
 

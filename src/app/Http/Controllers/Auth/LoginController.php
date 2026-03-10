@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Auth;
+namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AdminLoginRequest;
+use App\Http\Requests\LoginUserRequest;
 use App\Models\User;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Support\Facades\Hash;
@@ -16,15 +16,10 @@ class LoginController extends Controller
     {
     }
 
-    public function create()
-    {
-        return view('admin.auth.login');
-    }
-
-    public function store(AdminLoginRequest $request): LoginResponse
+    public function store(LoginUserRequest $request): LoginResponse
     {
         $user = User::where('email', $request->input('email'))
-            ->where('role', 'admin')
+            ->where('role', 'user')
             ->first();
 
         if (!$user || !Hash::check($request->input('password'), $user->password)) {
