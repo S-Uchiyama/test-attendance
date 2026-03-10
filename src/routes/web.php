@@ -36,10 +36,14 @@ Route::get('/', function () {
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 
-// 管理者
+// 管理者認証
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminLoginController::class, 'create'])->name('admin.login');
     Route::post('/login', [AdminLoginController::class, 'store'])->name('admin.login.store');
+});
+
+// 管理者機能
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
 
     Route::get('/attendance/list', [AdminAttendanceListController::class, 'index'])->name('admin.attendance.list');
